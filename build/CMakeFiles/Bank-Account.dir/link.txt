@@ -1,0 +1,1 @@
+/usr/bin/c++  -Wall -Werror -std=c++14 -Wl,--dependency-file=CMakeFiles/Bank-Account.dir/link.d "CMakeFiles/Bank-Account.dir/src/Main.cpp.o" -o Bank-Account

@@ -1,0 +1,3 @@
+/home/alex/Programing/Cpp_Projects/Bank-Account-App/build/CMakeFiles/Bank-Account.dir
+/home/alex/Programing/Cpp_Projects/Bank-Account-App/build/CMakeFiles/edit_cache.dir
+/home/alex/Programing/Cpp_Projects/Bank-Account-App/build/CMakeFiles/rebuild_cache.dir
