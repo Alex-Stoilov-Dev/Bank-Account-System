@@ -1,9 +1,19 @@
+# Top-level CMakeLists.txt
 cmake_minimum_required(VERSION 3.10)
-project(Bank-Account)
+project(bank_account_system)
 
-set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Werror -std=c++23")
-set (source_dir "${PROJECT_SOURCE_DIR}/src/")
+set(CMAKE_CXX_STANDARD 23)
+add_compile_options(-Wall -Werror)
 
-file (GLOB source_files "${source_dir}/*.cpp")
+# Define directories
+set(SRC_DIR "${PROJECT_SOURCE_DIR}/src")
+set(INCLUDE_DIR "${PROJECT_SOURCE_DIR}/includes")
 
-add_executable(Bank-Account ${source_files})
+# Compiler all source files
+file(GLOB SRC_FILES "${SRC_DIR}/*.cpp")
+
+# Create our executable file
+add_executable(bank_account_system ${SRC_FILES})
+
+# Add include directory for header files
+target_include_directories(bank_account_system PRIVATE ${INCLUDE_DIR})

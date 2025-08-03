@@ -1,0 +1,9 @@
+### Hi Charelly #############
+### Your balance is: 5050 EUR ###
+### Account ID: 1
+### Would you like to ###########
+1. Withdraw 
+2. Deposit
+3.  View Transaction History
+4. Save And Exit
+Your Pin: 3030

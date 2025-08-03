@@ -1,9 +1,7 @@
-#include <iostream>
-#include <iostream>
-#include <string>
-#include <fstream>
-#include <filesystem>
-
+#include "includes/account.h"
+#include "includes/create_account.h"
+#include "includes/save_account.h"
+/*
 class Account
 {
   std::string m_OwnerName;
@@ -51,7 +49,7 @@ void saveAccount(Account *acc)
   double balance = acc->getBalance();
   std::string pin = acc->getPin();
 
-  std::string accountFolder = "/home/alex/Programing/Cpp_Projects/Bank-Account-App/src/User_Data/" + name;
+  std::string accountFolder = "/home/alex/Programing/Cpp_Projects/Bank-Account-App/src/user_data/" + name;
   std::string accountFilePath = accountFolder + "/Account_Information.txt";
 
   std::filesystem::create_directories(accountFolder);
@@ -94,7 +92,7 @@ Account *createAccount()
   Account *acc = new Account(name, balance, pin);
   return acc;
 }
-
+*/
 int main()
 {
   Account *p_Account = createAccount();

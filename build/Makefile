@@ -117,41 +117,113 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Bank-Account
+# Target rules for targets named bank_account_system
 
 # Build rule for target.
-Bank-Account: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Bank-Account
-.PHONY : Bank-Account
+bank_account_system: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bank_account_system
+.PHONY : bank_account_system
 
 # fast build rule for target.
-Bank-Account/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Bank-Account.dir/build.make CMakeFiles/Bank-Account.dir/build
-.PHONY : Bank-Account/fast
+bank_account_system/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bank_account_system.dir/build.make CMakeFiles/bank_account_system.dir/build
+.PHONY : bank_account_system/fast
 
-src/Main.o: src/Main.cpp.o
-.PHONY : src/Main.o
+src/account.o: src/account.cpp.o
+.PHONY : src/account.o
 
 # target to build an object file
-src/Main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Bank-Account.dir/build.make CMakeFiles/Bank-Account.dir/src/Main.cpp.o
-.PHONY : src/Main.cpp.o
+src/account.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bank_account_system.dir/build.make CMakeFiles/bank_account_system.dir/src/account.cpp.o
+.PHONY : src/account.cpp.o
 
-src/Main.i: src/Main.cpp.i
-.PHONY : src/Main.i
+src/account.i: src/account.cpp.i
+.PHONY : src/account.i
 
 # target to preprocess a source file
-src/Main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Bank-Account.dir/build.make CMakeFiles/Bank-Account.dir/src/Main.cpp.i
-.PHONY : src/Main.cpp.i
+src/account.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bank_account_system.dir/build.make CMakeFiles/bank_account_system.dir/src/account.cpp.i
+.PHONY : src/account.cpp.i
 
-src/Main.s: src/Main.cpp.s
-.PHONY : src/Main.s
+src/account.s: src/account.cpp.s
+.PHONY : src/account.s
 
 # target to generate assembly for a file
-src/Main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Bank-Account.dir/build.make CMakeFiles/Bank-Account.dir/src/Main.cpp.s
-.PHONY : src/Main.cpp.s
+src/account.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bank_account_system.dir/build.make CMakeFiles/bank_account_system.dir/src/account.cpp.s
+.PHONY : src/account.cpp.s
+
+src/create_account.o: src/create_account.cpp.o
+.PHONY : src/create_account.o
+
+# target to build an object file
+src/create_account.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bank_account_system.dir/build.make CMakeFiles/bank_account_system.dir/src/create_account.cpp.o
+.PHONY : src/create_account.cpp.o
+
+src/create_account.i: src/create_account.cpp.i
+.PHONY : src/create_account.i
+
+# target to preprocess a source file
+src/create_account.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bank_account_system.dir/build.make CMakeFiles/bank_account_system.dir/src/create_account.cpp.i
+.PHONY : src/create_account.cpp.i
+
+src/create_account.s: src/create_account.cpp.s
+.PHONY : src/create_account.s
+
+# target to generate assembly for a file
+src/create_account.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bank_account_system.dir/build.make CMakeFiles/bank_account_system.dir/src/create_account.cpp.s
+.PHONY : src/create_account.cpp.s
+
+src/main.o: src/main.cpp.o
+.PHONY : src/main.o
+
+# target to build an object file
+src/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bank_account_system.dir/build.make CMakeFiles/bank_account_system.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
+
+src/main.i: src/main.cpp.i
+.PHONY : src/main.i
+
+# target to preprocess a source file
+src/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bank_account_system.dir/build.make CMakeFiles/bank_account_system.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
+
+src/main.s: src/main.cpp.s
+.PHONY : src/main.s
+
+# target to generate assembly for a file
+src/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bank_account_system.dir/build.make CMakeFiles/bank_account_system.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
+
+src/save_account.o: src/save_account.cpp.o
+.PHONY : src/save_account.o
+
+# target to build an object file
+src/save_account.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bank_account_system.dir/build.make CMakeFiles/bank_account_system.dir/src/save_account.cpp.o
+.PHONY : src/save_account.cpp.o
+
+src/save_account.i: src/save_account.cpp.i
+.PHONY : src/save_account.i
+
+# target to preprocess a source file
+src/save_account.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bank_account_system.dir/build.make CMakeFiles/bank_account_system.dir/src/save_account.cpp.i
+.PHONY : src/save_account.cpp.i
+
+src/save_account.s: src/save_account.cpp.s
+.PHONY : src/save_account.s
+
+# target to generate assembly for a file
+src/save_account.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bank_account_system.dir/build.make CMakeFiles/bank_account_system.dir/src/save_account.cpp.s
+.PHONY : src/save_account.cpp.s
 
 # Help Target
 help:
@@ -161,10 +233,19 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... Bank-Account"
-	@echo "... src/Main.o"
-	@echo "... src/Main.i"
-	@echo "... src/Main.s"
+	@echo "... bank_account_system"
+	@echo "... src/account.o"
+	@echo "... src/account.i"
+	@echo "... src/account.s"
+	@echo "... src/create_account.o"
+	@echo "... src/create_account.i"
+	@echo "... src/create_account.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
+	@echo "... src/save_account.o"
+	@echo "... src/save_account.i"
+	@echo "... src/save_account.s"
 .PHONY : help
 
 
