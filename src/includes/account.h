@@ -5,6 +5,7 @@ class Account
 {
   std::string m_OwnerName;
   double m_Balance;
+  static int s_NextAccountId;
   int m_AccountId;
   std::string m_Pin;
 

@@ -1,9 +1,12 @@
 #include <iostream>
 #include "includes/account.h"
 
+int Account::s_NextAccountId = 1;
+
 Account::Account(std::string &name, double balance, std::string pin) : m_OwnerName(name), m_Balance(balance), m_Pin(pin)
 {
-  m_AccountId++;
+  m_AccountId = s_NextAccountId;
+  ++s_NextAccountId;
 }
 
 int Account::getAccountNumber()
@@ -29,6 +32,6 @@ void Account::display()
             << "### Would you like to ##############\n"
             << "1. Withdraw \n"
             << "2. Deposit\n"
-            << "3.View Transaction History"
+            << "3. View Transaction History"
             << "\n4. Save And Exit";
 }
