@@ -9,7 +9,7 @@ Account::Account(std::string &name, double balance, std::string pin) : m_OwnerNa
   ++s_NextAccountId;
 }
 
-int Account::getAccountNumber()
+int Account::getAccountId()
 {
   return Account::m_AccountId;
 }
@@ -27,11 +27,16 @@ std::string Account::getPin()
 }
 void Account::display()
 {
-  std::cout << "### Hi " << m_OwnerName << "#############\n"
-            << "### #Your balance is : " << m_Balance << "EUR###\n"
-            << "### Would you like to ##############\n"
-            << "1. Withdraw \n"
-            << "2. Deposit\n"
-            << "3. View Transaction History"
-            << "\n4. Save And Exit";
+  std::cout << "###################################################\n"
+            << "######## C++ Banking Account Systems LTD   ########\n"
+            << "###################################################\n"
+            << "      Logged in as: " << m_OwnerName << " \n"
+            << "      Account ID: " << m_AccountId << "  \n\n"
+            << "      Balance: " << m_Balance << " EUR\n"
+            << "      Account Options:\n"
+            << "        1. Withdraw\n"
+            << "        2. Deposit\n"
+            << "        3. View Transaction History\n"
+            << "        4. Logout\n"
+            << "###################################################\n";
 }

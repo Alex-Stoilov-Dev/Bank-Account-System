@@ -11,7 +11,7 @@ class Account
 
 public:
   Account(std::string &name, double balance, std::string pin);
-  int getAccountNumber();
+  int getAccountId();
   std::string getName();
   double getBalance();
   std::string getPin();
