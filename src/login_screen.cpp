@@ -1,18 +1,10 @@
-#include <iostream>
+#include "includes/login_screen.h"
 
-void LoginFunction()
+void login_to_account()
 {
-  std::cout << "You've logged into your account!"
-            << "### Hi --NAME-- #############\n"
-            << "### Your balance is: --BALANCE-- EUR###\n"
-            << "### Would you like to ##############\n"
-            << "1. Withdraw \n"
-            << "2. Deposit\n"
-            << "3. View Transaction History"
-            << "\n4. Save And Exit";
 }
 
-void LoginScreen()
+void login_screen()
 {
   int choice;
 
@@ -31,19 +23,18 @@ void LoginScreen()
   switch (choice)
   {
   case 1:
+    login_to_account();
     break;
   case 2:
+    Account *new_account = create_account();
+    save_account(new_account);
     break;
   case 3:
+
     break;
   case 4:
     break;
   default:
     break;
   }
-}
-
-int main()
-{
-  LoginScreen();
 }

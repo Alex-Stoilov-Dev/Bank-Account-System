@@ -196,6 +196,7 @@ CMakeFiles/bank_account_system.dir/src/main.cpp.o: \
  /usr/include/c++/14.3.0/bits/ostream.tcc /usr/include/c++/14.3.0/istream \
  /usr/include/c++/14.3.0/bits/istream.tcc \
  /home/alex/Programing/Cpp_Projects/Bank-Account-App/src/includes/create_account.h \
+ /home/alex/Programing/Cpp_Projects/Bank-Account-App/src/includes/login_screen.h \
  /home/alex/Programing/Cpp_Projects/Bank-Account-App/src/includes/save_account.h \
  /usr/include/c++/14.3.0/fstream \
  /usr/include/c++/14.3.0/x86_64-unknown-linux-gnu/bits/basic_file.h \
@@ -216,4 +217,5 @@ CMakeFiles/bank_account_system.dir/src/main.cpp.o: \
  /usr/include/c++/14.3.0/bits/align.h \
  /usr/include/c++/14.3.0/bits/stl_uninitialized.h \
  /usr/include/c++/14.3.0/bits/fs_dir.h \
- /usr/include/c++/14.3.0/bits/fs_ops.h
+ /usr/include/c++/14.3.0/bits/fs_ops.h \
+ /home/alex/Programing/Cpp_Projects/Bank-Account-App/src/includes/login_screen.h

@@ -4,4 +4,4 @@
 #include <filesystem>
 #include "account.h"
 
-void saveAccount(Account *acc);
+void save_account(Account *acc);

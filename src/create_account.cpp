@@ -1,7 +1,7 @@
 #include "includes/create_account.h"
 #include "includes/account.h"
 
-Account *createAccount()
+Account *create_account()
 {
   std::string name;
   double balance;

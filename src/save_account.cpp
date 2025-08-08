@@ -1,6 +1,6 @@
 #include "includes/save_account.h"
 
-void saveAccount(Account *acc)
+void save_account(Account *acc)
 {
   // use the get methods to store data into the file.
   std::string account_id = std::to_string(acc->getAccountId());
@@ -59,4 +59,5 @@ void saveAccount(Account *acc)
     std::cerr << "FAILED TO OPEN FILE: " << account_file_path << std::endl;
     std::cout << "HINT: directory \"user_data\" might be missing" << std::endl;
   }
+  delete acc;
 }

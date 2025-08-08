@@ -232,6 +232,8 @@ CMakeFiles/bank_account_system.dir/src/account.cpp.o: /home/alex/Programing/Cpp_
 CMakeFiles/bank_account_system.dir/src/create_account.cpp.o: /home/alex/Programing/Cpp_Projects/Bank-Account-App/src/create_account.cpp \
   /home/alex/Programing/Cpp_Projects/Bank-Account-App/src/includes/account.h \
   /home/alex/Programing/Cpp_Projects/Bank-Account-App/src/includes/create_account.h \
+  /home/alex/Programing/Cpp_Projects/Bank-Account-App/src/includes/login_screen.h \
+  /home/alex/Programing/Cpp_Projects/Bank-Account-App/src/includes/save_account.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
@@ -239,7 +241,9 @@ CMakeFiles/bank_account_system.dir/src/create_account.cpp.o: /home/alex/Programi
   /usr/include/c++/14.3.0/backward/binders.h \
   /usr/include/c++/14.3.0/bit \
   /usr/include/c++/14.3.0/bits/algorithmfwd.h \
+  /usr/include/c++/14.3.0/bits/align.h \
   /usr/include/c++/14.3.0/bits/alloc_traits.h \
+  /usr/include/c++/14.3.0/bits/allocated_ptr.h \
   /usr/include/c++/14.3.0/bits/allocator.h \
   /usr/include/c++/14.3.0/bits/basic_ios.h \
   /usr/include/c++/14.3.0/bits/basic_ios.tcc \
@@ -247,6 +251,7 @@ CMakeFiles/bank_account_system.dir/src/create_account.cpp.o: /home/alex/Programi
   /usr/include/c++/14.3.0/bits/basic_string.tcc \
   /usr/include/c++/14.3.0/bits/char_traits.h \
   /usr/include/c++/14.3.0/bits/charconv.h \
+  /usr/include/c++/14.3.0/bits/chrono.h \
   /usr/include/c++/14.3.0/bits/codecvt.h \
   /usr/include/c++/14.3.0/bits/concept_check.h \
   /usr/include/c++/14.3.0/bits/cpp_type_traits.h \
@@ -256,6 +261,11 @@ CMakeFiles/bank_account_system.dir/src/create_account.cpp.o: /home/alex/Programi
   /usr/include/c++/14.3.0/bits/exception.h \
   /usr/include/c++/14.3.0/bits/exception_defines.h \
   /usr/include/c++/14.3.0/bits/exception_ptr.h \
+  /usr/include/c++/14.3.0/bits/fs_dir.h \
+  /usr/include/c++/14.3.0/bits/fs_fwd.h \
+  /usr/include/c++/14.3.0/bits/fs_ops.h \
+  /usr/include/c++/14.3.0/bits/fs_path.h \
+  /usr/include/c++/14.3.0/bits/fstream.tcc \
   /usr/include/c++/14.3.0/bits/functexcept.h \
   /usr/include/c++/14.3.0/bits/functional_hash.h \
   /usr/include/c++/14.3.0/bits/hash_bytes.h \
@@ -283,6 +293,7 @@ CMakeFiles/bank_account_system.dir/src/create_account.cpp.o: /home/alex/Programi
   /usr/include/c++/14.3.0/bits/postypes.h \
   /usr/include/c++/14.3.0/bits/predefined_ops.h \
   /usr/include/c++/14.3.0/bits/ptr_traits.h \
+  /usr/include/c++/14.3.0/bits/quoted_string.h \
   /usr/include/c++/14.3.0/bits/range_access.h \
   /usr/include/c++/14.3.0/bits/ranges_algobase.h \
   /usr/include/c++/14.3.0/bits/ranges_base.h \
@@ -290,6 +301,9 @@ CMakeFiles/bank_account_system.dir/src/create_account.cpp.o: /home/alex/Programi
   /usr/include/c++/14.3.0/bits/ranges_util.h \
   /usr/include/c++/14.3.0/bits/refwrap.h \
   /usr/include/c++/14.3.0/bits/requires_hosted.h \
+  /usr/include/c++/14.3.0/bits/shared_ptr.h \
+  /usr/include/c++/14.3.0/bits/shared_ptr_base.h \
+  /usr/include/c++/14.3.0/bits/sstream.tcc \
   /usr/include/c++/14.3.0/bits/std_abs.h \
   /usr/include/c++/14.3.0/bits/stl_algo.h \
   /usr/include/c++/14.3.0/bits/stl_algobase.h \
@@ -301,6 +315,7 @@ CMakeFiles/bank_account_system.dir/src/create_account.cpp.o: /home/alex/Programi
   /usr/include/c++/14.3.0/bits/stl_iterator_base_types.h \
   /usr/include/c++/14.3.0/bits/stl_pair.h \
   /usr/include/c++/14.3.0/bits/stl_tempbuf.h \
+  /usr/include/c++/14.3.0/bits/stl_uninitialized.h \
   /usr/include/c++/14.3.0/bits/streambuf.tcc \
   /usr/include/c++/14.3.0/bits/streambuf_iterator.h \
   /usr/include/c++/14.3.0/bits/string_view.tcc \
@@ -308,6 +323,7 @@ CMakeFiles/bank_account_system.dir/src/create_account.cpp.o: /home/alex/Programi
   /usr/include/c++/14.3.0/bits/unicode-data.h \
   /usr/include/c++/14.3.0/bits/unicode.h \
   /usr/include/c++/14.3.0/bits/uniform_int_dist.h \
+  /usr/include/c++/14.3.0/bits/unique_ptr.h \
   /usr/include/c++/14.3.0/bits/uses_allocator.h \
   /usr/include/c++/14.3.0/bits/uses_allocator_args.h \
   /usr/include/c++/14.3.0/bits/utility.h \
@@ -316,6 +332,7 @@ CMakeFiles/bank_account_system.dir/src/create_account.cpp.o: /home/alex/Programi
   /usr/include/c++/14.3.0/cerrno \
   /usr/include/c++/14.3.0/charconv \
   /usr/include/c++/14.3.0/clocale \
+  /usr/include/c++/14.3.0/codecvt \
   /usr/include/c++/14.3.0/compare \
   /usr/include/c++/14.3.0/concepts \
   /usr/include/c++/14.3.0/cstddef \
@@ -328,13 +345,18 @@ CMakeFiles/bank_account_system.dir/src/create_account.cpp.o: /home/alex/Programi
   /usr/include/c++/14.3.0/debug/assertions.h \
   /usr/include/c++/14.3.0/debug/debug.h \
   /usr/include/c++/14.3.0/exception \
+  /usr/include/c++/14.3.0/ext/aligned_buffer.h \
   /usr/include/c++/14.3.0/ext/alloc_traits.h \
   /usr/include/c++/14.3.0/ext/atomicity.h \
+  /usr/include/c++/14.3.0/ext/concurrence.h \
   /usr/include/c++/14.3.0/ext/numeric_traits.h \
   /usr/include/c++/14.3.0/ext/string_conversions.h \
   /usr/include/c++/14.3.0/ext/type_traits.h \
+  /usr/include/c++/14.3.0/filesystem \
   /usr/include/c++/14.3.0/format \
+  /usr/include/c++/14.3.0/fstream \
   /usr/include/c++/14.3.0/initializer_list \
+  /usr/include/c++/14.3.0/iomanip \
   /usr/include/c++/14.3.0/ios \
   /usr/include/c++/14.3.0/iosfwd \
   /usr/include/c++/14.3.0/iostream \
@@ -346,7 +368,9 @@ CMakeFiles/bank_account_system.dir/src/create_account.cpp.o: /home/alex/Programi
   /usr/include/c++/14.3.0/optional \
   /usr/include/c++/14.3.0/ostream \
   /usr/include/c++/14.3.0/pstl/pstl_config.h \
+  /usr/include/c++/14.3.0/ratio \
   /usr/include/c++/14.3.0/span \
+  /usr/include/c++/14.3.0/sstream \
   /usr/include/c++/14.3.0/stdexcept \
   /usr/include/c++/14.3.0/streambuf \
   /usr/include/c++/14.3.0/string \
@@ -357,8 +381,10 @@ CMakeFiles/bank_account_system.dir/src/create_account.cpp.o: /home/alex/Programi
   /usr/include/c++/14.3.0/typeinfo \
   /usr/include/c++/14.3.0/variant \
   /usr/include/c++/14.3.0/x86_64-unknown-linux-gnu/bits/atomic_word.h \
+  /usr/include/c++/14.3.0/x86_64-unknown-linux-gnu/bits/basic_file.h \
   /usr/include/c++/14.3.0/x86_64-unknown-linux-gnu/bits/c++allocator.h \
   /usr/include/c++/14.3.0/x86_64-unknown-linux-gnu/bits/c++config.h \
+  /usr/include/c++/14.3.0/x86_64-unknown-linux-gnu/bits/c++io.h \
   /usr/include/c++/14.3.0/x86_64-unknown-linux-gnu/bits/c++locale.h \
   /usr/include/c++/14.3.0/x86_64-unknown-linux-gnu/bits/cpu_defines.h \
   /usr/include/c++/14.3.0/x86_64-unknown-linux-gnu/bits/ctype_base.h \
@@ -461,6 +487,7 @@ CMakeFiles/bank_account_system.dir/src/create_account.cpp.o: /home/alex/Programi
 CMakeFiles/bank_account_system.dir/src/main.cpp.o: /home/alex/Programing/Cpp_Projects/Bank-Account-App/src/main.cpp \
   /home/alex/Programing/Cpp_Projects/Bank-Account-App/src/includes/account.h \
   /home/alex/Programing/Cpp_Projects/Bank-Account-App/src/includes/create_account.h \
+  /home/alex/Programing/Cpp_Projects/Bank-Account-App/src/includes/login_screen.h \
   /home/alex/Programing/Cpp_Projects/Bank-Account-App/src/includes/save_account.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
@@ -1013,6 +1040,8 @@ CMakeFiles/bank_account_system.dir/src/account.cpp.o:
 
 /usr/lib/x86_64-linux-gnu/Scrt1.o:
 
+/lib64/ld-linux-x86-64.so.2:
+
 /usr/include/c++/14.3.0/variant:
 
 /usr/include/c++/14.3.0/type_traits:
@@ -1303,6 +1332,8 @@ CMakeFiles/bank_account_system.dir/src/account.cpp.o:
 
 /usr/include/c++/14.3.0/x86_64-unknown-linux-gnu/bits/gthr-default.h:
 
+/home/alex/Programing/Cpp_Projects/Bank-Account-App/src/includes/login_screen.h:
+
 /usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
 
 /usr/include/x86_64-linux-gnu/bits/types.h:
@@ -1473,8 +1504,6 @@ CMakeFiles/bank_account_system.dir/src/account.cpp.o:
 
 /usr/include/x86_64-linux-gnu/bits/types/time_t.h:
 
-/lib64/ld-linux-x86-64.so.2:
-
 /usr/include/c++/14.3.0/iosfwd:
 
 /usr/include/c++/14.3.0/optional:
@@ -1498,12 +1527,6 @@ CMakeFiles/bank_account_system.dir/src/account.cpp.o:
 /usr/include/c++/14.3.0/bits/fs_path.h:
 
 /home/alex/Programing/Cpp_Projects/Bank-Account-App/src/create_account.cpp:
-
-/usr/include/c++/14.3.0/bits/functexcept.h:
-
-/home/alex/Programing/Cpp_Projects/Bank-Account-App/src/main.cpp:
-
-/usr/include/c++/14.3.0/iomanip:
 
 /usr/include/x86_64-linux-gnu/bits/types/FILE.h:
 
@@ -1530,6 +1553,12 @@ CMakeFiles/bank_account_system.dir/src/account.cpp.o:
 /usr/include/c++/14.3.0/cwchar:
 
 /usr/include/c++/14.3.0/fstream:
+
+/usr/include/c++/14.3.0/iomanip:
+
+/usr/include/c++/14.3.0/bits/functexcept.h:
+
+/home/alex/Programing/Cpp_Projects/Bank-Account-App/src/main.cpp:
 
 /usr/include/c++/14.3.0/ext/alloc_traits.h:
 
