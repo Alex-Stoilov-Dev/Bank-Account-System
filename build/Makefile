@@ -153,6 +153,30 @@ src/account.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/bank_account_system.dir/build.make CMakeFiles/bank_account_system.dir/src/account.cpp.s
 .PHONY : src/account.cpp.s
 
+src/change_pin.o: src/change_pin.cpp.o
+.PHONY : src/change_pin.o
+
+# target to build an object file
+src/change_pin.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bank_account_system.dir/build.make CMakeFiles/bank_account_system.dir/src/change_pin.cpp.o
+.PHONY : src/change_pin.cpp.o
+
+src/change_pin.i: src/change_pin.cpp.i
+.PHONY : src/change_pin.i
+
+# target to preprocess a source file
+src/change_pin.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bank_account_system.dir/build.make CMakeFiles/bank_account_system.dir/src/change_pin.cpp.i
+.PHONY : src/change_pin.cpp.i
+
+src/change_pin.s: src/change_pin.cpp.s
+.PHONY : src/change_pin.s
+
+# target to generate assembly for a file
+src/change_pin.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bank_account_system.dir/build.make CMakeFiles/bank_account_system.dir/src/change_pin.cpp.s
+.PHONY : src/change_pin.cpp.s
+
 src/create_account.o: src/create_account.cpp.o
 .PHONY : src/create_account.o
 
@@ -176,6 +200,30 @@ src/create_account.s: src/create_account.cpp.s
 src/create_account.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/bank_account_system.dir/build.make CMakeFiles/bank_account_system.dir/src/create_account.cpp.s
 .PHONY : src/create_account.cpp.s
+
+src/login_screen.o: src/login_screen.cpp.o
+.PHONY : src/login_screen.o
+
+# target to build an object file
+src/login_screen.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bank_account_system.dir/build.make CMakeFiles/bank_account_system.dir/src/login_screen.cpp.o
+.PHONY : src/login_screen.cpp.o
+
+src/login_screen.i: src/login_screen.cpp.i
+.PHONY : src/login_screen.i
+
+# target to preprocess a source file
+src/login_screen.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bank_account_system.dir/build.make CMakeFiles/bank_account_system.dir/src/login_screen.cpp.i
+.PHONY : src/login_screen.cpp.i
+
+src/login_screen.s: src/login_screen.cpp.s
+.PHONY : src/login_screen.s
+
+# target to generate assembly for a file
+src/login_screen.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bank_account_system.dir/build.make CMakeFiles/bank_account_system.dir/src/login_screen.cpp.s
+.PHONY : src/login_screen.cpp.s
 
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
@@ -237,9 +285,15 @@ help:
 	@echo "... src/account.o"
 	@echo "... src/account.i"
 	@echo "... src/account.s"
+	@echo "... src/change_pin.o"
+	@echo "... src/change_pin.i"
+	@echo "... src/change_pin.s"
 	@echo "... src/create_account.o"
 	@echo "... src/create_account.i"
 	@echo "... src/create_account.s"
+	@echo "... src/login_screen.o"
+	@echo "... src/login_screen.i"
+	@echo "... src/login_screen.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

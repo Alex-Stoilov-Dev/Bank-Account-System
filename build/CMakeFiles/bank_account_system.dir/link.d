@@ -3,7 +3,9 @@ bank_account_system: \
   /usr/lib/gcc/x86_64-unknown-linux-gnu/14.3.0/../../../x86_64-linux-gnu/crti.o \
   /usr/lib/gcc/x86_64-unknown-linux-gnu/14.3.0/crtbeginS.o \
   CMakeFiles/bank_account_system.dir/src/account.cpp.o \
+  CMakeFiles/bank_account_system.dir/src/change_pin.cpp.o \
   CMakeFiles/bank_account_system.dir/src/create_account.cpp.o \
+  CMakeFiles/bank_account_system.dir/src/login_screen.cpp.o \
   CMakeFiles/bank_account_system.dir/src/main.cpp.o \
   CMakeFiles/bank_account_system.dir/src/save_account.cpp.o \
   /usr/lib/gcc/x86_64-unknown-linux-gnu/14.3.0/../../../x86_64-linux-gnu/libstdc++.so \
@@ -42,7 +44,11 @@ bank_account_system: \
 
 CMakeFiles/bank_account_system.dir/src/account.cpp.o:
 
+CMakeFiles/bank_account_system.dir/src/change_pin.cpp.o:
+
 CMakeFiles/bank_account_system.dir/src/create_account.cpp.o:
+
+CMakeFiles/bank_account_system.dir/src/login_screen.cpp.o:
 
 CMakeFiles/bank_account_system.dir/src/main.cpp.o:
 

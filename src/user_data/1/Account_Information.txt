@@ -1,13 +1,13 @@
 ###################################################
 ######## C++ Banking Account Systems LTD   ########
 ###################################################
-###      Logged in as: Alex                                      ###
-###      Account ID: 1                        ###
-###                                             ###
-###      Balance: 4545.44 EUR                        ###
-###      Account Options:                       ###
-###        1. Withdraw                          ###
-###        2. Deposit                           ###
-###        3. View Transaction History          ###
-########                                   ########
+      Logged in as: Alex 
+      Account ID: 1  
+
+      Balance: 3030 EUR
+      Account Options:
+        1. Withdraw
+        2. Deposit
+        3. View Transaction History
+        4. Logout
 ###################################################

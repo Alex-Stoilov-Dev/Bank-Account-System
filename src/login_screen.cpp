@@ -1,4 +1,5 @@
 #include "includes/login_screen.h"
+#include "includes/change_pin.h"
 
 void login_to_account()
 {
@@ -23,18 +24,28 @@ void login_screen()
   switch (choice)
   {
   case 1:
+  {
     login_to_account();
     break;
+  }
   case 2:
+  {
     Account *new_account = create_account();
     save_account(new_account);
     break;
+  }
   case 3:
-
+  {
+    change_pin();
     break;
+  }
   case 4:
+  {
     break;
+  }
   default:
+  {
     break;
+  }
   }
 }

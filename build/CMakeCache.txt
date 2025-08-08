@@ -14,24 +14,6 @@
 # EXTERNAL cache entries
 ########################
 
-//Value Computed by CMake
-Bank-Account_BINARY_DIR:STATIC=/home/alex/Programing/Cpp_Projects/Bank-Account-App/build
-
-//Value Computed by CMake
-Bank-Account_IS_TOP_LEVEL:STATIC=ON
-
-//Value Computed by CMake
-Bank-Account_SOURCE_DIR:STATIC=/home/alex/Programing/Cpp_Projects/Bank-Account-App
-
-//Value Computed by CMake
-BankAccount_BINARY_DIR:STATIC=/home/alex/Programing/Cpp_Projects/Bank-Account-App/build
-
-//Value Computed by CMake
-BankAccount_IS_TOP_LEVEL:STATIC=ON
-
-//Value Computed by CMake
-BankAccount_SOURCE_DIR:STATIC=/home/alex/Programing/Cpp_Projects/Bank-Account-App
-
 //Path to a program.
 CMAKE_ADDR2LINE:FILEPATH=/usr/bin/addr2line
 
