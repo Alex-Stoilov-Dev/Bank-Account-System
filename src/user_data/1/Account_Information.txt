@@ -4,7 +4,7 @@
       Logged in as: Alex 
       Account ID: 1  
 
-      Balance: 3030 EUR
+      Balance: 1000 EUR
       Account Options:
         1. Withdraw
         2. Deposit

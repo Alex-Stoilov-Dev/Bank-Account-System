@@ -1,8 +1,9 @@
-#include "all_headers.h"
+#include "includes/all_headers.h"
 #include <filesystem>
 
 void display(const std::filesystem::path &account_path)
 {
+  int choice;
   std::ifstream account_info(account_path / "Account_Information.txt");
   if (!account_info.is_open())
   {
@@ -18,4 +19,21 @@ void display(const std::filesystem::path &account_path)
   }
 
   account_info.close();
+
+  std::cin >> choice;
+
+  switch (choice)
+  {
+  case 1:
+    // withdraw();
+    break;
+  case 2:
+    // deposit();
+  case 3:
+    // transaction_history();
+  case 4:
+    login_screen();
+  default:
+    break;
+  }
 }

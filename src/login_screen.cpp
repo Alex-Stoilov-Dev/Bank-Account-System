@@ -1,4 +1,4 @@
-#include <includes/all_headers.h>
+#include "includes/all_headers.h"
 #include <fstream>
 #include <filesystem>
 #include <string>
@@ -34,7 +34,7 @@ void login_to_account()
   if (pin == stored_pin)
   {
     std::cout << "Login Successful!\n";
-    display();
+    display(account_path);
   }
   else
   {

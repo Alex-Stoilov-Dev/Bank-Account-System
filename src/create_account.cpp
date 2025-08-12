@@ -19,15 +19,16 @@ Account *create_account()
   if (balance < 0)
   {
     std::cout << "You cannot create an account without initial balance.";
-    std::cout << "Please enter a valid initial balance";
+    std::cout << "\nPlease enter a valid initial balance: ";
     std::cin >> balance;
   }
 
-  std::cout << "\nPlese enter your pin (0-9) (only digits): ";
+  std::cout << "\nPlese enter your pin 6 digit pin): ";
   std::cin >> pin;
   if (pin.length() < 6 || pin.length() > 6)
   {
-    std::cout << " Please enter a PIN of length 6";
+    std::cout << "Please enter a 6 digit pin: ";
+    std::cin >> pin;
   }
 
   Account *acc = new Account(name, balance, pin);

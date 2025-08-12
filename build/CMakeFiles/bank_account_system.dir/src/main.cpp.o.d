@@ -1,6 +1,7 @@
 CMakeFiles/bank_account_system.dir/src/main.cpp.o: \
  /home/alex/Programing/Cpp_Projects/Bank-Account-App/src/main.cpp \
  /usr/include/stdc-predef.h \
+ /home/alex/Programing/Cpp_Projects/Bank-Account-App/src/includes/all_headers.h \
  /home/alex/Programing/Cpp_Projects/Bank-Account-App/src/includes/account.h \
  /usr/include/c++/14.3.0/iostream \
  /usr/include/c++/14.3.0/bits/requires_hosted.h \
@@ -218,4 +219,5 @@ CMakeFiles/bank_account_system.dir/src/main.cpp.o: \
  /usr/include/c++/14.3.0/bits/stl_uninitialized.h \
  /usr/include/c++/14.3.0/bits/fs_dir.h \
  /usr/include/c++/14.3.0/bits/fs_ops.h \
- /home/alex/Programing/Cpp_Projects/Bank-Account-App/src/includes/login_screen.h
+ /home/alex/Programing/Cpp_Projects/Bank-Account-App/src/includes/change_pin.h \
+ /home/alex/Programing/Cpp_Projects/Bank-Account-App/src/includes/display.h

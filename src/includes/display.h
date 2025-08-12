@@ -2,4 +2,4 @@
 #include <filesystem>
 #include <fstream>
 
-void display();
+void display(const std::filesystem::path &account_path);

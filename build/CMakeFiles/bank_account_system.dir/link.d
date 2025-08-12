@@ -5,6 +5,7 @@ bank_account_system: \
   CMakeFiles/bank_account_system.dir/src/account.cpp.o \
   CMakeFiles/bank_account_system.dir/src/change_pin.cpp.o \
   CMakeFiles/bank_account_system.dir/src/create_account.cpp.o \
+  CMakeFiles/bank_account_system.dir/src/display.cpp.o \
   CMakeFiles/bank_account_system.dir/src/login_screen.cpp.o \
   CMakeFiles/bank_account_system.dir/src/main.cpp.o \
   CMakeFiles/bank_account_system.dir/src/save_account.cpp.o \
@@ -47,6 +48,8 @@ CMakeFiles/bank_account_system.dir/src/account.cpp.o:
 CMakeFiles/bank_account_system.dir/src/change_pin.cpp.o:
 
 CMakeFiles/bank_account_system.dir/src/create_account.cpp.o:
+
+CMakeFiles/bank_account_system.dir/src/display.cpp.o:
 
 CMakeFiles/bank_account_system.dir/src/login_screen.cpp.o:
 

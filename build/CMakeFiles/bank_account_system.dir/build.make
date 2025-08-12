@@ -114,10 +114,24 @@ CMakeFiles/bank_account_system.dir/src/create_account.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/bank_account_system.dir/src/create_account.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alex/Programing/Cpp_Projects/Bank-Account-App/src/create_account.cpp -o CMakeFiles/bank_account_system.dir/src/create_account.cpp.s
 
+CMakeFiles/bank_account_system.dir/src/display.cpp.o: CMakeFiles/bank_account_system.dir/flags.make
+CMakeFiles/bank_account_system.dir/src/display.cpp.o: /home/alex/Programing/Cpp_Projects/Bank-Account-App/src/display.cpp
+CMakeFiles/bank_account_system.dir/src/display.cpp.o: CMakeFiles/bank_account_system.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/alex/Programing/Cpp_Projects/Bank-Account-App/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/bank_account_system.dir/src/display.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/bank_account_system.dir/src/display.cpp.o -MF CMakeFiles/bank_account_system.dir/src/display.cpp.o.d -o CMakeFiles/bank_account_system.dir/src/display.cpp.o -c /home/alex/Programing/Cpp_Projects/Bank-Account-App/src/display.cpp
+
+CMakeFiles/bank_account_system.dir/src/display.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/bank_account_system.dir/src/display.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alex/Programing/Cpp_Projects/Bank-Account-App/src/display.cpp > CMakeFiles/bank_account_system.dir/src/display.cpp.i
+
+CMakeFiles/bank_account_system.dir/src/display.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/bank_account_system.dir/src/display.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alex/Programing/Cpp_Projects/Bank-Account-App/src/display.cpp -o CMakeFiles/bank_account_system.dir/src/display.cpp.s
+
 CMakeFiles/bank_account_system.dir/src/login_screen.cpp.o: CMakeFiles/bank_account_system.dir/flags.make
 CMakeFiles/bank_account_system.dir/src/login_screen.cpp.o: /home/alex/Programing/Cpp_Projects/Bank-Account-App/src/login_screen.cpp
 CMakeFiles/bank_account_system.dir/src/login_screen.cpp.o: CMakeFiles/bank_account_system.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/alex/Programing/Cpp_Projects/Bank-Account-App/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/bank_account_system.dir/src/login_screen.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/alex/Programing/Cpp_Projects/Bank-Account-App/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/bank_account_system.dir/src/login_screen.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/bank_account_system.dir/src/login_screen.cpp.o -MF CMakeFiles/bank_account_system.dir/src/login_screen.cpp.o.d -o CMakeFiles/bank_account_system.dir/src/login_screen.cpp.o -c /home/alex/Programing/Cpp_Projects/Bank-Account-App/src/login_screen.cpp
 
 CMakeFiles/bank_account_system.dir/src/login_screen.cpp.i: cmake_force
@@ -131,7 +145,7 @@ CMakeFiles/bank_account_system.dir/src/login_screen.cpp.s: cmake_force
 CMakeFiles/bank_account_system.dir/src/main.cpp.o: CMakeFiles/bank_account_system.dir/flags.make
 CMakeFiles/bank_account_system.dir/src/main.cpp.o: /home/alex/Programing/Cpp_Projects/Bank-Account-App/src/main.cpp
 CMakeFiles/bank_account_system.dir/src/main.cpp.o: CMakeFiles/bank_account_system.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/alex/Programing/Cpp_Projects/Bank-Account-App/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/bank_account_system.dir/src/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/alex/Programing/Cpp_Projects/Bank-Account-App/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/bank_account_system.dir/src/main.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/bank_account_system.dir/src/main.cpp.o -MF CMakeFiles/bank_account_system.dir/src/main.cpp.o.d -o CMakeFiles/bank_account_system.dir/src/main.cpp.o -c /home/alex/Programing/Cpp_Projects/Bank-Account-App/src/main.cpp
 
 CMakeFiles/bank_account_system.dir/src/main.cpp.i: cmake_force
@@ -145,7 +159,7 @@ CMakeFiles/bank_account_system.dir/src/main.cpp.s: cmake_force
 CMakeFiles/bank_account_system.dir/src/save_account.cpp.o: CMakeFiles/bank_account_system.dir/flags.make
 CMakeFiles/bank_account_system.dir/src/save_account.cpp.o: /home/alex/Programing/Cpp_Projects/Bank-Account-App/src/save_account.cpp
 CMakeFiles/bank_account_system.dir/src/save_account.cpp.o: CMakeFiles/bank_account_system.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/alex/Programing/Cpp_Projects/Bank-Account-App/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/bank_account_system.dir/src/save_account.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/alex/Programing/Cpp_Projects/Bank-Account-App/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/bank_account_system.dir/src/save_account.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/bank_account_system.dir/src/save_account.cpp.o -MF CMakeFiles/bank_account_system.dir/src/save_account.cpp.o.d -o CMakeFiles/bank_account_system.dir/src/save_account.cpp.o -c /home/alex/Programing/Cpp_Projects/Bank-Account-App/src/save_account.cpp
 
 CMakeFiles/bank_account_system.dir/src/save_account.cpp.i: cmake_force
@@ -161,6 +175,7 @@ bank_account_system_OBJECTS = \
 "CMakeFiles/bank_account_system.dir/src/account.cpp.o" \
 "CMakeFiles/bank_account_system.dir/src/change_pin.cpp.o" \
 "CMakeFiles/bank_account_system.dir/src/create_account.cpp.o" \
+"CMakeFiles/bank_account_system.dir/src/display.cpp.o" \
 "CMakeFiles/bank_account_system.dir/src/login_screen.cpp.o" \
 "CMakeFiles/bank_account_system.dir/src/main.cpp.o" \
 "CMakeFiles/bank_account_system.dir/src/save_account.cpp.o"
@@ -171,13 +186,14 @@ bank_account_system_EXTERNAL_OBJECTS =
 bank_account_system: CMakeFiles/bank_account_system.dir/src/account.cpp.o
 bank_account_system: CMakeFiles/bank_account_system.dir/src/change_pin.cpp.o
 bank_account_system: CMakeFiles/bank_account_system.dir/src/create_account.cpp.o
+bank_account_system: CMakeFiles/bank_account_system.dir/src/display.cpp.o
 bank_account_system: CMakeFiles/bank_account_system.dir/src/login_screen.cpp.o
 bank_account_system: CMakeFiles/bank_account_system.dir/src/main.cpp.o
 bank_account_system: CMakeFiles/bank_account_system.dir/src/save_account.cpp.o
 bank_account_system: CMakeFiles/bank_account_system.dir/build.make
 bank_account_system: CMakeFiles/bank_account_system.dir/compiler_depend.ts
 bank_account_system: CMakeFiles/bank_account_system.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/alex/Programing/Cpp_Projects/Bank-Account-App/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable bank_account_system"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/alex/Programing/Cpp_Projects/Bank-Account-App/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable bank_account_system"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/bank_account_system.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

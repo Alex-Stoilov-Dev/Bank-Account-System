@@ -201,6 +201,30 @@ src/create_account.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/bank_account_system.dir/build.make CMakeFiles/bank_account_system.dir/src/create_account.cpp.s
 .PHONY : src/create_account.cpp.s
 
+src/display.o: src/display.cpp.o
+.PHONY : src/display.o
+
+# target to build an object file
+src/display.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bank_account_system.dir/build.make CMakeFiles/bank_account_system.dir/src/display.cpp.o
+.PHONY : src/display.cpp.o
+
+src/display.i: src/display.cpp.i
+.PHONY : src/display.i
+
+# target to preprocess a source file
+src/display.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bank_account_system.dir/build.make CMakeFiles/bank_account_system.dir/src/display.cpp.i
+.PHONY : src/display.cpp.i
+
+src/display.s: src/display.cpp.s
+.PHONY : src/display.s
+
+# target to generate assembly for a file
+src/display.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bank_account_system.dir/build.make CMakeFiles/bank_account_system.dir/src/display.cpp.s
+.PHONY : src/display.cpp.s
+
 src/login_screen.o: src/login_screen.cpp.o
 .PHONY : src/login_screen.o
 
@@ -291,6 +315,9 @@ help:
 	@echo "... src/create_account.o"
 	@echo "... src/create_account.i"
 	@echo "... src/create_account.s"
+	@echo "... src/display.o"
+	@echo "... src/display.i"
+	@echo "... src/display.s"
 	@echo "... src/login_screen.o"
 	@echo "... src/login_screen.i"
 	@echo "... src/login_screen.s"

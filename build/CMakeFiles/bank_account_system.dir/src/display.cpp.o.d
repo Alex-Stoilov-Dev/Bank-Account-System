@@ -1,5 +1,5 @@
-CMakeFiles/bank_account_system.dir/src/login_screen.cpp.o: \
- /home/alex/Programing/Cpp_Projects/Bank-Account-App/src/login_screen.cpp \
+CMakeFiles/bank_account_system.dir/src/display.cpp.o: \
+ /home/alex/Programing/Cpp_Projects/Bank-Account-App/src/display.cpp \
  /usr/include/stdc-predef.h \
  /home/alex/Programing/Cpp_Projects/Bank-Account-App/src/includes/all_headers.h \
  /home/alex/Programing/Cpp_Projects/Bank-Account-App/src/includes/account.h \
