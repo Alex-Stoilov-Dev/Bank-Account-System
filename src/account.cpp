@@ -9,6 +9,7 @@ Account::Account(std::string &name, double balance, std::string pin) : m_OwnerNa
   ++s_NextAccountId;
 }
 
+
 int Account::getAccountId()
 {
   return Account::m_AccountId;

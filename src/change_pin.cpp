@@ -1,4 +1,4 @@
-#include "includes/change_pin.h"
+#include "includes/all_headers.h"
 
 void change_pin()
 {

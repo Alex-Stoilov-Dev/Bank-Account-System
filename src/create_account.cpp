@@ -1,5 +1,4 @@
-#include "includes/create_account.h"
-#include "includes/account.h"
+#include "includes/all_headers.h"
 
 Account *create_account()
 {
@@ -7,14 +6,29 @@ Account *create_account()
   double balance;
   std::string pin;
 
-  std::cout << "Please enter an Owner Name for the account: ";
+  std::cout << "Please enter an Owner Name for the account (A-z): ";
   std::cin >> name;
+  if (name == " " || name == "")
+  {
+    std::cout << "Please enter a valid Owner name: ";
+    std::cin >> name;
+  }
 
   std::cout << "\nWhat is your account's initial balance?: ";
   std::cin >> balance;
+  if (balance < 0)
+  {
+    std::cout << "You cannot create an account without initial balance.";
+    std::cout << "Please enter a valid initial balance";
+    std::cin >> balance;
+  }
 
-  std::cout << "\nPlese enter your pin: ";
+  std::cout << "\nPlese enter your pin (0-9) (only digits): ";
   std::cin >> pin;
+  if (pin.length() < 6 || pin.length() > 6)
+  {
+    std::cout << " Please enter a PIN of length 6";
+  }
 
   Account *acc = new Account(name, balance, pin);
   return acc;

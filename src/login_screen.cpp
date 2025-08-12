@@ -1,8 +1,46 @@
-#include "includes/login_screen.h"
-#include "includes/change_pin.h"
+#include <includes/all_headers.h>
+#include <fstream>
+#include <filesystem>
+#include <string>
+#include <cstdlib>
 
 void login_to_account()
 {
+  const std::string base_path = "/home/alex/Programing/Cpp_Projects/Bank-Account-App/src/user_data";
+  std::string id, pin;
+  std::cout << "Account ID: ";
+  std::cin >> id;
+  std::cout << "\nAccount Pin: ";
+  std::cin >> pin;
+
+  std::filesystem::path account_path = std::filesystem::path(base_path) / id;
+  if (!std::filesystem::exists(account_path) || !std::filesystem::is_directory(account_path))
+  {
+    system("pwd");
+    std::cout << "Account not found. \nReturning to main menu...\n\n";
+    login_screen();
+  }
+
+  std::filesystem::path pin_file = account_path / "pin.txt";
+  if (!std::filesystem::exists(pin_file))
+  {
+    std::cout << "PIN file missing. \n Please create reach out to admins to resolve the issue.\n\n";
+    login_screen();
+  }
+  std::ifstream file(pin_file);
+  std::string stored_pin;
+  std::getline(file, stored_pin);
+
+  if (pin == stored_pin)
+  {
+    std::cout << "Login Successful!\n";
+    display();
+  }
+  else
+  {
+    std::cout << "Invalid PIN. \nReturning to main menu...\n\n";
+    login_screen();
+  }
 }
 
 void login_screen()

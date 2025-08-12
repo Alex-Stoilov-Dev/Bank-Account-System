@@ -19,35 +19,26 @@ void save_account(Account *acc)
   std::ofstream account_file(account_file_path);
   std::ofstream pin_file(pin_file_path);
   std::ofstream account_id_file(account_id_file_path);
-  if (account_file.is_open() && account_file.good() && pin_file.is_open() && pin_file.good() && account_id_file.is_open() && account_id_file.good())
+  if (account_file.is_open() &&
+      account_file.good() &&
+      pin_file.is_open() &&
+      pin_file.good() &&
+      account_id_file.is_open() &&
+      account_id_file.good())
   {
-    account_file << "###################################################\n"
-                 << "######## C++ Banking Account Systems LTD   ########\n"
-                 << "###################################################\n"
-                 << "      Logged in as: " << name << " \n"
-                 << "      Account ID: " << account_id << "  \n\n"
-                 << "      Balance: " << balance << " EUR\n"
-                 << "      Account Options:\n"
-                 << "        1. Withdraw\n"
-                 << "        2. Deposit\n"
-                 << "        3. View Transaction History\n"
-                 << "        4. Logout\n"
-                 << "###################################################\n";
-
-    /*
-            << "###################################################\n"
-            << "######## C++ Banking Account Systems LTD   ########\n"
-            << "###################################################\n"
-            << "      Logged in as: " << name << " \n"
-            << "      Account ID: " << account_id << "  \n\n"
-            << "      Balance: " << balance << " EUR\n"
-            << "      Account Options:\n"
-            << "        1. Withdraw\n"
-            << "        2. Deposit\n"
-            << "        3. View Transaction History\n"
-            << "        4. Logout\n"
-            << "###################################################\n";
-     */
+    account_file
+        << "###################################################\n"
+        << "######## C++ Banking Account Systems LTD   ########\n"
+        << "###################################################\n"
+        << "      Logged in as: " << name << " \n"
+        << "      Account ID: " << account_id << "  \n\n"
+        << "      Balance: " << balance << " EUR\n"
+        << "      Account Options:\n"
+        << "        1. Withdraw\n"
+        << "        2. Deposit\n"
+        << "        3. View Transaction History\n"
+        << "        4. Logout\n"
+        << "###################################################\n";
     pin_file << pin;
     account_id_file << account_id;
     account_file.close();
