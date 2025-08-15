@@ -4,18 +4,16 @@
 class Account
 {
 private:
-  std::string m_OwnerName;
-  double m_Balance;
-  int m_AccountId = 1;
-  std::string m_Pin;
+  std::string m_owner_name;
+  double m_balance;
+  int m_account_id = 1;
+  std::string m_pin;
 
 public:
   Account(std::string &name, double balance, std::string pin);
-  int getAccountId();
-  std::string getName();
-  double getBalance();
-  std::string getPin();
-  void display();
-  int get_id();
-  void Increment();
+  int get_account_id();
+  void increment();
+  std::string get_name();
+  double get_balance();
+  std::string get_pin();
 };

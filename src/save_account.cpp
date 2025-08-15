@@ -4,7 +4,7 @@ namespace fs = std::filesystem;
 
 bool check_existing_accounts(Account *acc)
 {
-  int account_id = acc->get_id();
+  int account_id = acc->get_account_id();
   // This function is used to check if account's already exist
   // It makes sure that the account's don't have ID 1
   // Also they don't ovewrite
@@ -18,13 +18,13 @@ bool check_existing_accounts(Account *acc)
 
   if (std::to_string(account_id) == stored_id)
   {
-    acc->Increment();
+    acc->increment();
     return true;
   }
   else if (std::to_string(account_id) < stored_id || std::to_string(account_id) > stored_id)
   {
     account_id = std::stoi(stored_id);
-    acc->Increment();
+    acc->increment();
     return true;
   }
 
@@ -36,10 +36,10 @@ void save_account(Account *acc)
   // Use the get methods to access the variables of our class.
   // Also used to set their values in the file
   check_existing_accounts(acc);
-  std::string account_id = std::to_string(acc->getAccountId());
-  std::string name = acc->getName();
-  double balance = acc->getBalance();
-  std::string pin = acc->getPin();
+  std::string account_id = std::to_string(acc->get_account_id());
+  std::string name = acc->get_name();
+  double balance = acc->get_balance();
+  std::string pin = acc->get_pin();
 
   // We check if the user data and user list directories exist, and if not we create them.
   // Handles the case where the user deleted the folders accidentally or on purpose.

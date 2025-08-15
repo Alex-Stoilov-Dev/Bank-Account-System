@@ -1,47 +1,27 @@
 #include <iostream>
 #include "includes/account.h"
 
-Account::Account(std::string &name, double balance, std::string pin) : m_OwnerName(name), m_Balance(balance), m_Pin(pin)
+Account::Account(std::string &name, double balance, std::string pin) : m_owner_name(name), m_balance(balance), m_pin(pin)
 {
 }
 
-int Account::getAccountId()
+int Account::get_account_id()
 {
-  return Account::m_AccountId;
+  return Account::m_account_id;
 }
-std::string Account::getName()
+void Account::increment()
 {
-  return m_OwnerName;
-}
-double Account::getBalance()
-{
-  return m_Balance;
-}
-std::string Account::getPin()
-{
-  return m_Pin;
-}
-
-void Account::display()
-{
-  std::cout << "###################################################\n"
-            << "######## C++ Banking Account Systems LTD   ########\n"
-            << "###################################################\n"
-            << "      Logged in as: " << m_OwnerName << " \n"
-            << "      Account ID: " << m_AccountId << "  \n\n"
-            << "      Balance: " << m_Balance << " EUR\n"
-            << "      Account Options:\n"
-            << "        1. Withdraw\n"
-            << "        2. Deposit\n"
-            << "        3. View Transaction History\n"
-            << "        4. Logout\n"
-            << "###################################################\n";
-}
-int Account::get_id()
-{
-  return m_AccountId;
-}
-void Account::Increment()
-{
-  Account::m_AccountId++;
+  Account::m_account_id++;
 };
+std::string Account::get_name()
+{
+  return m_owner_name;
+}
+double Account::get_balance()
+{
+  return m_balance;
+}
+std::string Account::get_pin()
+{
+  return m_pin;
+}
