@@ -1,20 +1,39 @@
 # Bank Account System
 
-This is a C++ application that allows users to:
-- Create Bank Accounts, with balance, name, PINs, and unique IDs.
-- The program Automatically saves the account to the "User_Data" directory.
-  
-# Building The App
-For the build, we are using cmake. After forking the repo, you can build it like so:
+This is a C++ application that allows users to:  
+- Create bank accounts with balance, name, PIN, and unique IDs.  
+- Automatically save accounts to the `user_data` directory.  
+- Track the latest account IDs globally in the `user_list` directory.
+- Working Login Functionality
+
+---
+
+## Building the App
+
+This project uses **CMake**, and it works on **Linux, macOS, and Windows**. The code is written in C++23 but only requires **C++17 or above**.  
+
+### Cross-Platform Build Instructions
+
+Open a terminal (Linux/macOS) or PowerShell / Command Prompt (Windows) and run:
+
+```bash
+# From the project root
+cmake -S . -B build         # Configure the project and generate build files
+cmake --build build --config Release  # Build the project
 ```
-cd build/
-cmake --build .
+After building, you can run the executable:
+
+- **Linux/macOS**:
+```bash
+./build/bank-account-system
 ```
-This code is writen in C++23, but it only require's C++17 and above.
-# Todo
-We still need to add more functionality, like:
-  1. Login with account number’s & PIN
-  2. Deposit / Withdraw Methods
-  3. Implement transaction history, and make it viewable.
-  4. Save and Load data from the filesystem:
-     - Currently only saves data
+- **Windows (PowerShell or CMD)**:
+```bash
+.\build\Release\bank-account-system.exe
+```
+TODO / Up coming features
+-
+- Create a change pin method, so you can change existing user pins
+- Deposit / Withdraw methods.
+- Implement transaction history and make it viewable.
+- Add Basic File Encryption
