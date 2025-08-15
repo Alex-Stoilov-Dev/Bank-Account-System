@@ -21,10 +21,7 @@ std::string Account::getPin()
 {
   return m_Pin;
 }
-int Account::get_id()
-{
-  return m_AccountId;
-}
+
 void Account::display()
 {
   std::cout << "###################################################\n"
@@ -39,6 +36,10 @@ void Account::display()
             << "        3. View Transaction History\n"
             << "        4. Logout\n"
             << "###################################################\n";
+}
+int Account::get_id()
+{
+  return m_AccountId;
 }
 void Account::Increment()
 {

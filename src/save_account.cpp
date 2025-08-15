@@ -21,6 +21,12 @@ bool check_existing_accounts(Account *acc)
     acc->Increment();
     return true;
   }
+  else if (std::to_string(account_id) < stored_id || std::to_string(account_id) > stored_id)
+  {
+    account_id = std::stoi(stored_id);
+    acc->Increment();
+    return true;
+  }
 
   return false;
 }
