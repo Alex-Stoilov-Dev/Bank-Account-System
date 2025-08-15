@@ -3,10 +3,10 @@
 
 class Account
 {
+private:
   std::string m_OwnerName;
   double m_Balance;
-  static int s_NextAccountId;
-  int m_AccountId;
+  int m_AccountId = 1;
   std::string m_Pin;
 
 public:
@@ -16,4 +16,6 @@ public:
   double getBalance();
   std::string getPin();
   void display();
+  int get_id();
+  void Increment();
 };

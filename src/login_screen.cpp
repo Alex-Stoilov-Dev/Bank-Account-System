@@ -7,7 +7,7 @@
 void login_to_account()
 {
   // We make sure that the program knows what path to use to find the user's data
-  const std::string base_path = "Bank-Account-App/src/user_data";
+  const std::string base_path = std::string(PROJECT_ROOT) + "Bank-Account-App/src/user_data";
 
   std::string id, pin;
 

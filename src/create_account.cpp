@@ -1,4 +1,5 @@
 #include "includes/all_headers.h"
+#include <filesystem>
 
 Account *create_account()
 {
@@ -23,7 +24,7 @@ Account *create_account()
     std::cin >> balance;
   }
 
-  std::cout << "\nPlese enter your pin 6 digit pin): ";
+  std::cout << "\nPlese enter your pin 6 digit pin: ";
   std::cin >> pin;
   // Forces the PIN to be 6 digits
   if (pin.length() < 6 || pin.length() > 6)
@@ -32,6 +33,7 @@ Account *create_account()
     std::cin >> pin;
   }
   Account *acc = new Account(name, balance, pin);
-  return acc; // This pointer should be passed to save account.
+  return acc;
+  // This pointer should be passed to save account.
   // And then deleted in there
 }

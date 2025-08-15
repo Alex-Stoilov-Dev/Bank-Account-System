@@ -1,10 +1,10 @@
 ###################################################
 ######## C++ Banking Account Systems LTD   ########
 ###################################################
-      Logged in as: Jaremie 
-      Account ID: 1  
+      Logged in as: Robert 
+      Account ID: 2  
 
-      Balance: 321.21 EUR
+      Balance: 32143.2 EUR
       Account Options:
         1. Withdraw
         2. Deposit

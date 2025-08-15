@@ -1,9 +1,35 @@
 #include "includes/save_account.h"
 
+namespace fs = std::filesystem;
+
+bool check_existing_accounts(Account *acc)
+{
+  int account_id = acc->get_id();
+  // This function is used to check if account's already exist
+  // It makes sure that the account's don't have ID 1
+  // Also they don't ovewrite
+
+  fs::path user_list_dir = fs::path(PROJECT_ROOT) / "src" / "user_list";
+
+  fs::path id_file = std::string(PROJECT_ROOT) / user_list_dir / "id.txt";
+  std::ifstream read_id_file(id_file);
+  std::string stored_id;
+  std::getline(read_id_file, stored_id);
+
+  if (std::to_string(account_id) == stored_id)
+  {
+    acc->Increment();
+    return true;
+  }
+
+  return false;
+}
+
 void save_account(Account *acc)
 {
   // Use the get methods to access the variables of our class.
   // Also used to set their values in the file
+  check_existing_accounts(acc);
   std::string account_id = std::to_string(acc->getAccountId());
   std::string name = acc->getName();
   double balance = acc->getBalance();
@@ -11,29 +37,26 @@ void save_account(Account *acc)
 
   // We check if the user data and user list directories exist, and if not we create them.
   // Handles the case where the user deleted the folders accidentally or on purpose.
-  if (!std::filesystem::exists("Bank-Account-App/src/user_data/"))
-  {
-    std::filesystem::create_directories("Bank-Account-App/src/user_data/");
-  }
-  if (!std::filesystem::exists("Bank-Account-App/src/user_data/"))
-  {
-    std::filesystem::create_directories("Bank-Account-App/src/user_data/");
-  }
+  fs::path user_data_dir = fs::path(PROJECT_ROOT) / "src" / "user_data";
+  fs::create_directories(user_data_dir);
+
+  fs::path user_list_dir = fs::path(PROJECT_ROOT) / "src" / "user_list";
+  fs::create_directories(user_list_dir);
 
   // Set up our folders and files to write to
-  std::string account_folder = "Bank-Account-App/src/user_data/" + account_id; // ID Used as directory name
-  std::string user_list_tracker = "Bank-Account-App/src/user_list/";
-  std::string account_data_path = account_folder + "/Account_Information.txt"; // Data stored in Acc_info.txt
-  std::string pin_file_path = account_folder + "/pin.txt";                     // store the pin separately for ease of access
-  std::string account_id_file_path = account_folder + "/id.txt";               // Store the ID Separately
-  std::string global_id_tracker = user_list_tracker + "/id.txt";
+  fs::path account_folder = user_data_dir / account_id; // ID Used as directory name
+  fs::path user_list_tracker = user_list_dir;
+  fs::path account_data_path = account_folder / "Account_Information.txt"; // Data stored in Acc_info.txt
+  fs::path pin_file_path = account_folder / "pin.txt";                     // store the pin separately for ease of access
+  fs::path account_id_file_path = account_folder / "id.txt";               // Store the ID Separately
+  fs::path global_id_tracker = user_list_tracker / "id.txt";
 
   /*
     ID is stored in the user's data so they are aware of what their ID is for login functionality.
     Last ID is also stored in a specific file, so future account's can have a refrence to it.
   */
 
-  std::filesystem::create_directories(account_folder);
+  fs::create_directories(account_folder);
 
   // Make sure we have access to all of our files
   std::ofstream account_file(account_data_path);

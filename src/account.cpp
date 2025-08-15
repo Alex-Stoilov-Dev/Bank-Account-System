@@ -1,13 +1,8 @@
 #include <iostream>
 #include "includes/account.h"
 
-int Account::s_NextAccountId = 1;
-
 Account::Account(std::string &name, double balance, std::string pin) : m_OwnerName(name), m_Balance(balance), m_Pin(pin)
 {
-  // This set's the next account's ID 
-  m_AccountId = s_NextAccountId;
-  ++s_NextAccountId;
 }
 
 int Account::getAccountId()
@@ -26,6 +21,10 @@ std::string Account::getPin()
 {
   return m_Pin;
 }
+int Account::get_id()
+{
+  return m_AccountId;
+}
 void Account::display()
 {
   std::cout << "###################################################\n"
@@ -41,3 +40,7 @@ void Account::display()
             << "        4. Logout\n"
             << "###################################################\n";
 }
+void Account::Increment()
+{
+  Account::m_AccountId++;
+};

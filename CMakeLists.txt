@@ -8,6 +8,7 @@ add_compile_options(-Wall -Werror)
 # Define directories
 set(SRC_DIR "${PROJECT_SOURCE_DIR}/src")
 set(INCLUDE_DIR "${PROJECT_SOURCE_DIR}/includes")
+add_compile_definitions(PROJECT_ROOT="${CMAKE_SOURCE_DIR}")
 
 # Compiler all source files
 file(GLOB SRC_FILES "${SRC_DIR}/*.cpp")
