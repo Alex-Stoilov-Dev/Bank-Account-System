@@ -25,12 +25,13 @@ Account *create_account()
 
   std::cout << "\nPlese enter your pin 6 digit pin): ";
   std::cin >> pin;
+  // Forces the PIN to be 6 digits
   if (pin.length() < 6 || pin.length() > 6)
   {
     std::cout << "Please enter a 6 digit pin: ";
     std::cin >> pin;
   }
-
   Account *acc = new Account(name, balance, pin);
-  return acc;
+  return acc; // This pointer should be passed to save account.
+  // And then deleted in there
 }

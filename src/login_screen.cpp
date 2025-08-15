@@ -6,27 +6,33 @@
 
 void login_to_account()
 {
-  const std::string base_path = "/home/alex/Programing/Cpp_Projects/Bank-Account-App/src/user_data";
+  // We make sure that the program knows what path to use to find the user's data
+  const std::string base_path = "Bank-Account-App/src/user_data";
+
   std::string id, pin;
+
   std::cout << "Account ID: ";
   std::cin >> id;
   std::cout << "\nAccount Pin: ";
   std::cin >> pin;
 
+  // We use the base path + the ID of the account
+  // The ID is also the name of the folder
   std::filesystem::path account_path = std::filesystem::path(base_path) / id;
   if (!std::filesystem::exists(account_path) || !std::filesystem::is_directory(account_path))
   {
-    system("pwd");
-    std::cout << "Account not found. \nReturning to main menu...\n\n";
-    login_screen();
+    login_screen(); // Returns to the main menu if there are any issues.
   }
 
+  // Create a path to our pin.txt for authentication.
   std::filesystem::path pin_file = account_path / "pin.txt";
   if (!std::filesystem::exists(pin_file))
   {
     std::cout << "PIN file missing. \n Please create reach out to admins to resolve the issue.\n\n";
     login_screen();
+    // Handles the case where the pin.txt file has been deleted
   }
+
   std::ifstream file(pin_file);
   std::string stored_pin;
   std::getline(file, stored_pin);
@@ -34,7 +40,7 @@ void login_to_account()
   if (pin == stored_pin)
   {
     std::cout << "Login Successful!\n";
-    display(account_path);
+    display(account_path); // Calls the display function, with our account path everything is correct
   }
   else
   {
@@ -46,7 +52,7 @@ void login_to_account()
 void login_screen()
 {
   int choice;
-
+  // This is the screen/UI
   std::cout << "###################################################\n"
             << "######## Hello, welcome to our banking app ########\n"
             << "###\t\t\t\t\t\t###\n"
@@ -59,6 +65,7 @@ void login_screen()
             << "###\t\t\t\t\t\t###\n"
             << "###################################################\n";
   std::cin >> choice;
+  // This handles the user input for the UI
   switch (choice)
   {
   case 1:
@@ -68,17 +75,21 @@ void login_screen()
   }
   case 2:
   {
-    Account *new_account = create_account();
+    // This calls our create function, and passes the pointer
+    // To save account.
+    Account *new_account = create_account(); // Pointer deleted in save_account.cpp
     save_account(new_account);
     break;
   }
   case 3:
   {
+    // Basic change func
     change_pin();
     break;
   }
   case 4:
   {
+    // The exit Option
     break;
   }
   default:

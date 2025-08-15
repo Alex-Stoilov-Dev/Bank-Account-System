@@ -3,5 +3,4 @@
 int main()
 {
   login_screen();
-  return 0;
 }
