@@ -9,11 +9,15 @@ private:
   int m_account_id = 1;
   std::string m_pin;
 
-public:
+public: 
   Account(std::string &name, double balance, std::string pin);
-  int get_account_id();
+  ~Account();
+  void save_account() const;
+  int get_account_id() const;
   void increment();
-  std::string get_name();
-  double get_balance();
-  std::string get_pin();
+  std::string get_name() const;
+  double get_balance() const;
+  std::string get_pin() const;
+  void change_pin();
+  Account create_account();
 };

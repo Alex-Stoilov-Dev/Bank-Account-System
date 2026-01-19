@@ -1,10 +1,10 @@
 ###################################################
 ######## C++ Banking Account Systems LTD   ########
 ###################################################
-      Logged in as: Jaremie 
+      Logged in as: Owen 
       Account ID: 1  
 
-      Balance: 321.21 EUR
+      Balance: 50 EUR
       Account Options:
         1. Withdraw
         2. Deposit

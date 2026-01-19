@@ -1,8 +1,9 @@
+#include "includes/account.h"
 #include "includes/all_headers.h"
+#include "includes/create_account.h"
 #include <fstream>
 #include <filesystem>
 #include <string>
-#include <cstdlib>
 
 void login_to_account()
 {
@@ -19,6 +20,7 @@ void login_to_account()
   // We use the base path + the ID of the account
   // The ID is also the name of the folder
   std::filesystem::path account_path = std::filesystem::path(base_path) / id;
+  std::filesystem::path information_file = account_path / "Account_Information.txt";
   if (!std::filesystem::exists(account_path) || !std::filesystem::is_directory(account_path))
   {
     login_screen(); // Returns to the main menu if there are any issues.
@@ -40,7 +42,7 @@ void login_to_account()
   if (pin == stored_pin)
   {
     std::cout << "Login Successful!\n";
-    display(account_path); // Calls the display function, with our account path everything is correct
+    display(information_file); // Calls the display function, with our account path everything is correct
   }
   else
   {
@@ -77,14 +79,14 @@ void login_screen()
   {
     // This calls our create function, and passes the pointer
     // To save account.
-    Account *new_account = create_account(); // Pointer deleted in save_account.cpp
-    save_account(new_account);
+    Account *acc = create_account(); // Pointer deleted in save_account.cpp
+    acc->save_account();
     break;
   }
   case 3:
   {
     // Basic change func
-    change_pin();
+    
     break;
   }
   case 4:

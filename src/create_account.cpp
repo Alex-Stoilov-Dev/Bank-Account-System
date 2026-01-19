@@ -1,5 +1,4 @@
 #include "includes/all_headers.h"
-#include <filesystem>
 
 Account *create_account()
 {
@@ -34,6 +33,5 @@ Account *create_account()
   }
   Account *acc = new Account(name, balance, pin);
   return acc;
-  // This pointer should be passed to save account.
-  // And then deleted in there
+
 }
