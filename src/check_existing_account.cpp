@@ -1,4 +1,6 @@
-#include "includes/check_existing_account.h"
+#include "includes/check_existing_account.hpp"
+#include <filesystem>
+#include <fstream>
 
 namespace fs = std::filesystem;
 

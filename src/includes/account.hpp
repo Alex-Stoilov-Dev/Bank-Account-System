@@ -19,5 +19,4 @@ public:
   double get_balance() const;
   std::string get_pin() const;
   void change_pin();
-  Account create_account();
 };

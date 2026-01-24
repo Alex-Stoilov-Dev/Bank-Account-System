@@ -1,5 +1,8 @@
+#include <mysql/mysql.h>
+#include <string>
 #include <iostream>
-#include "includes/account.h"
+#include "includes/db_manager.hpp"
+#include "includes/account.hpp"
 #include <filesystem>
 #include <fstream>
 
@@ -112,6 +115,7 @@ void Account::save_account() const {
     std::cout << "HINT: directory \"user_data\" might be missing" << std::endl;
   }
 }
+
 void Account::change_pin(){
   
   std::string pin = "";

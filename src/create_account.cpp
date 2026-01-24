@@ -1,7 +1,17 @@
-#include "includes/all_headers.h"
+#include "includes/account.hpp"
+#include <iostream>
+#include <mysql/mysql.h>
+#include "includes/db_manager.hpp"
 
-Account *create_account()
+void create_account()
 {
+  dbManager DB{};
+
+  MYSQL *DB_conn = DB.mysql_connection_setup();;
+  MYSQL_RES *result;
+
+  const char *query;
+
   std::string name;
   double balance;
   std::string pin;
@@ -31,7 +41,23 @@ Account *create_account()
     std::cout << "Please enter a 6 digit pin: ";
     std::cin >> pin;
   }
-  Account *acc = new Account(name, balance, pin);
-  return acc;
 
+  Account new_user(name,balance,pin);
+
+
+  mysql_stmt_init(DB_conn);
+
+  std::string query_str = std::format(
+      "INSERT INTO users(username, pin_hashed, balance) VALUES ('{}', MD5('{}'), '{}')",
+      name, pin, balance
+  );
+  
+  query = query_str.c_str();
+
+  result = DB.execute_sql_query(DB_conn, query);
+  if (result != nullptr) {
+    mysql_free_result(result);
+    result = nullptr;
+  }
+  mysql_close(DB_conn);
 }

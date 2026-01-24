@@ -1,4 +1,4 @@
-#include "includes/all_headers.h"
+#include "includes/login_screen.hpp"
 
 int main()
 {

@@ -1,6 +1,8 @@
-#include "includes/account.h"
-#include "includes/all_headers.h"
-#include "includes/create_account.h"
+#include "includes/login_screen.hpp"
+#include "includes/account.hpp"
+#include "includes/create_account.hpp"
+#include "includes/display.hpp"
+#include <cstdlib>
 #include <fstream>
 #include <filesystem>
 #include <string>
@@ -75,12 +77,16 @@ void login_screen()
     login_to_account();
     break;
   }
-  case 2:
+  case 2: // Create new account
   {
-    // This calls our create function, and passes the pointer
-    // To save account.
-    Account *acc = create_account(); // Pointer deleted in save_account.cpp
-    acc->save_account();
+    char proceed;
+    create_account(); 
+    std::cout << "\nWould you like to go back to the Login Screen? Y/n";
+    std::cin >> proceed;
+    if(proceed == 'n'){
+      std::cout << "\n\n\nThank you for registering your account!";
+      exit(0);
+    }
     break;
   }
   case 3:
