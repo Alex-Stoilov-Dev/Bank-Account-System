@@ -10,7 +10,7 @@ This is a C++ application that allows users to:
 
 ## Building the App
 
-This project uses **CMake**, and it works on **Linux, macOS, and Windows**. The code is written in C++23 but only requires **C++17 or above**.  
+This project uses **CMake**, and it works on **Linux, macOS, and Windows**. The code is written in C++23 but only requires **C++20 or above**.  
 
 ### Cross-Platform Build Instructions
 
