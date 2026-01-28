@@ -1,11 +1,7 @@
-# Set the default behavior for all files.
-* text=auto eol=lf
+# Ignore all Python files in the tools and github folders for language stats
+tools/*.py linguist-detectable=false
+.github/workflows/*.yml linguist-detectable=false
 
-# Normalized and converts to native line endings on checkout.
-*.c text
-*.cc text
-*.cxx
-*.cpp text
-*.h text
-*.hxx text
-*.hpp text
+# Explicitly mark your source files as the main attraction
+src/*.cpp linguist-detectable=true
+src/includes/*.hpp linguist-detectable=true
