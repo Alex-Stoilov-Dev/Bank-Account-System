@@ -39,8 +39,7 @@ void login_screen()
   case 2: // Create new account
   {
     std::shared_ptr<Account> user = create_account();
-    user->display_account_dashboard();
-
+    display(user);
     break;
   }
   case 3:

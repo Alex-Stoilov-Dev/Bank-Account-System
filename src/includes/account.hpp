@@ -19,7 +19,8 @@ private:
                               "        1. Withdraw\n"
                               "        2. Deposit\n"
                               "        3. View Transaction History\n"
-                              "        4. Logout\n"
+                              "        4. Change pin\n"
+                              "        5. Logout\n"
                               "###################################################\n", m_username, m_balance);
 public:
   Account(std::string &name, double balance, std::string pin);
@@ -33,5 +34,5 @@ public:
   void change_pin();
   void widthdraw();
   void deposit();
-  void display_account_dashboard();
+  void display_account_dashboard() const;
 };

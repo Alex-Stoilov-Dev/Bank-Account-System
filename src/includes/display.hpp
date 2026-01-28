@@ -2,4 +2,4 @@
 #include <filesystem>
 //#include <fstream>
 
-void display(const std::filesystem::path &account_path);
+void display(const std::shared_ptr<Account>& account);

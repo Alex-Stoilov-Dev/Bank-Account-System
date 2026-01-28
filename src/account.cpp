@@ -107,6 +107,6 @@ void Account::set_user_id(){
   std::cout << fetched_info;
 }
 
-void Account::display_account_dashboard(){
+void Account::display_account_dashboard() const {
   std::cout << m_account_dashboard;
 }
