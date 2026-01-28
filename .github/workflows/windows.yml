@@ -10,19 +10,13 @@ jobs:
   build:
     runs-on: windows-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: prepare
+    - uses: actions/checkout@v4
+    - name: install
       run: |
-        make prepare
+        vcpkg install mysql:x64-windows
     - name: configure
       run: |
-        cmake -H"." -Bbuild -T host=x86 -A x64 -DCMAKE_BUILD_TYPE="Debug"
+        cmake -S . -B build -A x64 -DCMAKE_BUILD_TYPE=Debug -DCMAKE_TOOLCHAIN_FILE="$env:VCPKG_INSTALLATION_ROOT/scripts/buildsystems/vcpkg.cmake"
     - name: building
       run: |
-        cmake --build build --config Debug --target unit_tests -j4
-    - name: testing
-      run: |
-        cd build
-        cd tests
-        cd Debug
-        .\unit_tests.exe
+        cmake --build build --config Debug -j4

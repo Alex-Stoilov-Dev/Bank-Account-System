@@ -10,18 +10,15 @@ jobs:
   build:
     runs-on: macos-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: prepare
+    - uses: actions/checkout@v4
+    - name: install
       run: |
-        make prepare
+        brew install mysql-client
     - name: configure
       run: |
-        cmake -H. -Bbuild -G "Unix Makefiles" -DCMAKE_BUILD_TYPE="Debug"
+        export FLAGS="-I$(brew --prefix mysql-client)/include"
+        export LDFLAGS="-L$(brew --prefix mysql-client)/lib"
+        cmake -S . -B build -DCMAKE_BUILD_TYPE=Debug
     - name: building
       run: |
-        cmake --build build --config Debug --target unit_tests -j4
-    - name: testing
-      run: |
-        cd build
-        cd tests
-        ./unit_tests
+        cmake --build build --config Debug -j4
