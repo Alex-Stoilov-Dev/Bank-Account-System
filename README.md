@@ -33,7 +33,6 @@ After building, you can run the executable:
 ```
 TODO / Up coming features
 -
-- Create a change pin method, so you can change existing user pins
 - Deposit / Withdraw methods.
 - Implement transaction history and make it viewable.
 - Add Basic File Encryption
