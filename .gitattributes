@@ -1,7 +1,7 @@
 # Ignore all Python files in the tools and github folders for language stats
-tools/*.py linguist-detectable=false
-.github/workflows/*.yml linguist-detectable=false
+tools/*.py -linguist-detectable
+.github/workflows/*.yml -linguist-detectable
 
 # Explicitly mark your source files as the main attraction
-src/*.cpp linguist-detectable=true
-src/includes/*.hpp linguist-detectable=true
+src/*.cpp linguist-detectable
+src/includes/*.hpp linguist-detectable
