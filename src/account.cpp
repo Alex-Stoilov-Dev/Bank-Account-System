@@ -3,28 +3,16 @@
 #include <iostream>
 #include "includes/db_manager.hpp"
 #include "includes/account.hpp"
-#include <filesystem>
-#include <fstream>
 
-namespace fs = std::filesystem;
 
 // std::string &name, double balance, std::string pin) : m_owner_name(name), m_balance(balance), m_pin(pin)
-Account::Account(std::string &name, double balance, std::string pin) : m_owner_name(name), m_balance(balance), m_pin(pin){}
+Account::Account(std::string &name, double balance, std::string pin) : m_username(name), m_balance(balance), m_pin(pin){}
 
-
-int Account::get_account_id () const
-{
-  return m_account_id;
-}
-void Account::increment()
-{
-  Account::m_account_id++;
-};
 std::string Account::get_name () const
 {
-  return m_owner_name;
+  return m_username;
 }
-double Account::get_balance() const 
+double Account::get_balance() const
 {
   return m_balance;
 }
@@ -33,99 +21,92 @@ std::string Account::get_pin() const
   return m_pin;
 }
 
-Account::~Account(){
-
-}
-
-void Account::save_account() const {
-  // Use the get methods to access the variables of our class.
-  // Also used to set their values in the file
-  //check_existing_accounts(acc);
-  std::string account_id = std::to_string(this->m_account_id);
-  std::string name = this->m_owner_name;
-  double balance = this->m_balance;
-  std::string pin = this->m_pin;
-
-  // We check if the user data and user list directories exist, and if not we create them.
-  // Handles the case where the user deleted the folders accidentally or on purpose.
-  fs::path user_data_dir = fs::path(PROJECT_ROOT) / "src" / "user_data";
-  fs::create_directories(user_data_dir);
-
-  fs::path user_list_dir = fs::path(PROJECT_ROOT) / "src" / "user_list";
-  fs::create_directories(user_list_dir);
-
-  // Set up our folders and files to write to
-  fs::path account_folder = user_data_dir / account_id; // ID Used as directory name
-  fs::path user_list_tracker = user_list_dir;
-  fs::path account_data_path = account_folder / "Account_Information.txt"; // Data stored in Acc_info.txt
-  fs::path pin_file_path = account_folder / "pin.txt";                     // store the pin separately for ease of access
-  fs::path account_id_file_path = account_folder / "id.txt";               // Store the ID Separately
-  fs::path global_id_tracker = user_list_tracker / "id.txt";
-
-  /*
-    ID is stored in the user's data so they are aware of what their ID is for login functionality.
-    Last ID is also stored in a specific file, so future account's can have a refrence to it.
-  */
-
-  fs::create_directories(account_folder);
-
-  // Make sure we have access to all of our files
-  std::ofstream account_file(account_data_path);
-  std::ofstream pin_file(pin_file_path);
-  std::ofstream account_id_file(account_id_file_path);
-  std::ofstream id_tracker(global_id_tracker);
-  if (account_file.is_open() &&
-      account_file.good() &&
-      pin_file.is_open() &&
-      pin_file.good() &&
-      account_id_file.is_open() &&
-      account_id_file.good() &&
-      id_tracker.is_open() &&
-      id_tracker.good()
-      // Validation checks
-  )
-  {
-    // This is the screen the users sees when logging in;
-    account_file
-        << "###################################################\n"
-        << "######## C++ Banking Account Systems LTD   ########\n"
-        << "###################################################\n"
-        << "      Logged in as: " << name << " \n"
-        << "      Account ID: " << account_id << "  \n\n"
-        << "      Balance: " << balance << " EUR\n"
-        << "      Account Options:\n"
-        << "        1. Withdraw\n"
-        << "        2. Deposit\n"
-        << "        3. View Transaction History\n"
-        << "        4. Logout\n"
-        << "###################################################\n";
-    pin_file << pin;
-    account_id_file << account_id;
-    id_tracker << account_id;
-
-    // Close the files
-    account_file.close();
-    pin_file.close();
-    account_id_file.close();
-    id_tracker.close();
-  }
-  else
-  {
-    std::cerr << "FAILED TO OPEN FILE: " << account_data_path << std::endl;
-    std::cout << "HINT: directory \"user_data\" might be missing" << std::endl;
-  }
-}
+Account::~Account(){}
 
 void Account::change_pin(){
-  
-  std::string pin = "";
 
+  std::string pin;
+
+  std::cout << "\nPlese enter your new pin 6 digit pin: ";
+  std::cin >> pin;
+  // Forces the PIN to be 6 digits
   while (pin.length() < 6 || pin.length() > 6)
   {
-
-    std::cout << "Please enter a new 6 digit pin: ";
+    std::cout << "Please enter a 6 digit pin: ";
     std::cin >> pin;
-    this->m_pin = pin;
   }
 
+  m_pin = pin;
+
+  save_account();
+
+}
+
+void Account::save_account() const { // This function will save any changes made to an account
+
+  dbManager DB{};
+
+  DB.create_db();
+
+  const char* query;
+
+  MYSQL *DB_conn = DB.mysql_connection_setup();
+  MYSQL_RES *result;
+
+  std::string query_str = std::format(
+    "UPDATE users SET username = '{}', pin_hashed = MD5('{}'), balance = '{}' WHERE username = '{}'"
+    ,this->m_username, this->m_pin, this->m_balance, this->m_username); // SQL QUERY IS WRITTEN HERE
+
+  query = query_str.c_str();
+
+  result = DB.execute_sql_query(DB_conn, query);
+  if (result != nullptr) {
+    mysql_free_result(result);
+    result = nullptr;
+  }
+  mysql_close(DB_conn);
+
+}
+
+void Account::widthdraw() {
+
+}
+
+void Account::deposit() {
+
+}
+
+void Account::set_user_id(){
+
+  dbManager DB{};
+
+  DB.create_db();
+
+  const char* query;
+
+  MYSQL *DB_conn = DB.mysql_connection_setup();
+
+  std::string query_str = std::format("SELECT id FROM users WHERE username={};", this->m_username);
+
+  query = query_str.c_str();
+
+  MYSQL_RES *result = DB.execute_sql_query(DB_conn, query);
+
+  std::string fetched_info;
+
+  if(result){
+    MYSQL_ROW row;
+
+    if((row = mysql_fetch_row(result)))
+    {
+      if (row[0]){
+        fetched_info = row[0];
+      }
+    }
+  }
+  std::cout << fetched_info;
+}
+
+void Account::display_account_dashboard(){
+  std::cout << m_account_dashboard;
 }

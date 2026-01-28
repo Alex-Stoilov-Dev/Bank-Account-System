@@ -2,10 +2,14 @@
 #include <iostream>
 #include <mysql/mysql.h>
 #include "includes/db_manager.hpp"
+#include "includes/create_account.hpp"
+#include <memory>
 
-void create_account()
+std::shared_ptr<Account> create_account()
 {
   dbManager DB{};
+
+  DB.create_db();
 
   MYSQL *DB_conn = DB.mysql_connection_setup();;
   MYSQL_RES *result;
@@ -42,8 +46,7 @@ void create_account()
     std::cin >> pin;
   }
 
-  Account new_user(name,balance,pin);
-
+  auto pBank_user = std::make_shared<Account>(name,balance,pin);
 
   mysql_stmt_init(DB_conn);
 
@@ -51,7 +54,7 @@ void create_account()
       "INSERT INTO users(username, pin_hashed, balance) VALUES ('{}', MD5('{}'), '{}')",
       name, pin, balance
   );
-  
+
   query = query_str.c_str();
 
   result = DB.execute_sql_query(DB_conn, query);
@@ -60,4 +63,6 @@ void create_account()
     result = nullptr;
   }
   mysql_close(DB_conn);
+
+  return pBank_user;
 }

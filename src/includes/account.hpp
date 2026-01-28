@@ -4,12 +4,24 @@
 class Account
 {
 private:
-  std::string m_owner_name;
+  int m_user_id;
+  void set_user_id();
+  std::string m_username;
   double m_balance;
-  int m_account_id = 1;
   std::string m_pin;
-
-public: 
+  std::string m_account_dashboard = std::format(
+                              "###################################################\n"
+                              "######## C++ Banking Account Systems LTD   ########\n"
+                              "###################################################\n"
+                              "      Logged in as:  {}  \n"
+                              "      Balance:  {}  EUR\n"
+                              "      Account Options:\n"
+                              "        1. Withdraw\n"
+                              "        2. Deposit\n"
+                              "        3. View Transaction History\n"
+                              "        4. Logout\n"
+                              "###################################################\n", m_username, m_balance);
+public:
   Account(std::string &name, double balance, std::string pin);
   ~Account();
   void save_account() const;
@@ -19,4 +31,7 @@ public:
   double get_balance() const;
   std::string get_pin() const;
   void change_pin();
+  void widthdraw();
+  void deposit();
+  void display_account_dashboard();
 };

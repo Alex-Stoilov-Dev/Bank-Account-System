@@ -16,6 +16,7 @@ public:
   MYSQL *mysql_connection_setup();
 
   MYSQL_RES *execute_sql_query(MYSQL *connection, const char *sql_query);
+  void create_db();
 
 private:
   const char *database, *user, *password, *server;

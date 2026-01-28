@@ -2,4 +2,4 @@
 #include <iostream>
 #include "account.hpp"
 
-bool check_existing_accounts(Account *acc);
+bool check_existing_accounts();

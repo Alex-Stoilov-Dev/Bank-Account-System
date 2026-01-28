@@ -9,48 +9,7 @@
 
 void login_to_account()
 {
-  // We make sure that the program knows what path to use to find the user's data
-  const std::string base_path = std::string(PROJECT_ROOT) + "Bank-Account-App/src/user_data";
 
-  std::string id, pin;
-
-  std::cout << "Account ID: ";
-  std::cin >> id;
-  std::cout << "\nAccount Pin: ";
-  std::cin >> pin;
-
-  // We use the base path + the ID of the account
-  // The ID is also the name of the folder
-  std::filesystem::path account_path = std::filesystem::path(base_path) / id;
-  std::filesystem::path information_file = account_path / "Account_Information.txt";
-  if (!std::filesystem::exists(account_path) || !std::filesystem::is_directory(account_path))
-  {
-    login_screen(); // Returns to the main menu if there are any issues.
-  }
-
-  // Create a path to our pin.txt for authentication.
-  std::filesystem::path pin_file = account_path / "pin.txt";
-  if (!std::filesystem::exists(pin_file))
-  {
-    std::cout << "PIN file missing. \n Please create reach out to admins to resolve the issue.\n\n";
-    login_screen();
-    // Handles the case where the pin.txt file has been deleted
-  }
-
-  std::ifstream file(pin_file);
-  std::string stored_pin;
-  std::getline(file, stored_pin);
-
-  if (pin == stored_pin)
-  {
-    std::cout << "Login Successful!\n";
-    display(information_file); // Calls the display function, with our account path everything is correct
-  }
-  else
-  {
-    std::cout << "Invalid PIN. \nReturning to main menu...\n\n";
-    login_screen();
-  }
 }
 
 void login_screen()
@@ -79,20 +38,15 @@ void login_screen()
   }
   case 2: // Create new account
   {
-    char proceed;
-    create_account(); 
-    std::cout << "\nWould you like to go back to the Login Screen? Y/n";
-    std::cin >> proceed;
-    if(proceed == 'n'){
-      std::cout << "\n\n\nThank you for registering your account!";
-      exit(0);
-    }
+    std::shared_ptr<Account> user = create_account();
+    user->display_account_dashboard();
+
     break;
   }
   case 3:
   {
     // Basic change func
-    
+
     break;
   }
   case 4:

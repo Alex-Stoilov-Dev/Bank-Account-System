@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include <memory>
 #include "account.hpp"
 
-Account *create_account();
+std::shared_ptr<Account> create_account();
